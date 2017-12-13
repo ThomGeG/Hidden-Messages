@@ -1,7 +1,8 @@
-package tests;
+package test.java;
+
 import org.junit.Test;
 
-import main.Encoder;
+import main.java.Encoder;
 
 import static org.junit.Assert.*;
 
