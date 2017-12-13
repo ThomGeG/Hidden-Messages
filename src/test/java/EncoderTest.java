@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
 import java.awt.image.BufferedImage;
 import java.util.Arrays;
 
-public class EncoderTests {
+public class EncoderTest {
 	
 	/** Helper function to generate a bounded random number */
 	public static int rand(int low, int high){
