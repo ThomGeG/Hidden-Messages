@@ -2,12 +2,13 @@ package test.java;
 
 import org.junit.Test;
 
+import main.java.ColouredBehaviour;
 import main.java.Encoder;
 
 import static org.junit.Assert.*;
 
-import java.awt.image.BufferedImage;
 import java.util.Arrays;
+import java.awt.image.BufferedImage;
 
 public class EncoderTest {
 	
@@ -21,8 +22,10 @@ public class EncoderTest {
 	
 		System.out.println("--V-- Test --V--");
 		
-		BufferedImage encodedImage	= Encoder.encode(b);
-		byte[] decodedBytes			= Encoder.decode(encodedImage);
+		Encoder e = new Encoder();
+		
+		BufferedImage encodedImage	= e.encode(b);
+		byte[] decodedBytes			= e.decode(encodedImage);
 		
 		System.out.println("Expected: " + Arrays.toString(b));
 		System.out.println("Actual:   " + Arrays.toString(decodedBytes));

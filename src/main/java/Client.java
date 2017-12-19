@@ -27,7 +27,7 @@ public class Client {
 		if(source.getPath().toLowerCase().endsWith(".png")) { //Decoding an image.
 			
 			image = ImageIO.read(source);
-			arr = Encoder.decode(image);
+			arr = new Encoder().decode(image);
 			
 			FileOutputStream os = new FileOutputStream(destination);
 			os.write(arr);
@@ -41,7 +41,7 @@ public class Client {
 			FileInputStream fs = new FileInputStream(source);
 			
 			fs.read(arr);
-			image = Encoder.encode(arr);
+			image = new Encoder().encode(arr);
 			
 			fs.close();
 			ImageIO.write(image, "png", destination);
